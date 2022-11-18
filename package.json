@@ -2,7 +2,7 @@
   "type": "module",
   "private": true,
   "packageManager": "pnpm@7.8.0",
-  "homepage": "",
+  "homepage": "https://webszy.github.io/learn_atctions/",
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",

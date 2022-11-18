@@ -14,9 +14,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Setup Node
+            uses: actions/setup-node@v3
+            with:
+              node-version: '16'
 
       - name: Install and Build
         run: |
+          npm i pnpm -g
           pnpm install
           pnpm run build  --base=/learn_atctions/
 
@@ -25,3 +30,4 @@ jobs:
         with:
           personal_token: ${{ secrets.ACCESS_TOKEN }}
           publish_dir: ./dist
+          enable_jekyll: false
